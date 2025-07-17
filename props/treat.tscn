@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwvortbak34ms"]
+
+[ext_resource type="PackedScene" uid="uid://d3jtlsnnxketo" path="res://props/candy/animal_crossing_new_leaf_candy.glb" id="1_4k50v"]
+[ext_resource type="Script" uid="uid://b66ojucgcf16r" path="res://props/treat.gd" id="1_dnahq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dnahq"]
+size = Vector3(2.07227, 0.950317, 1.25)
+
+[node name="Treat" type="Area3D"]
+script = ExtResource("1_dnahq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0269165, 0.462463, 0)
+shape = SubResource("BoxShape3D_dnahq")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_4k50v")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

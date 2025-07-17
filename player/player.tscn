@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://wq8xow3orism"]
+
+[ext_resource type="Script" uid="uid://dcxefakwi41do" path="res://player/player.gd" id="1_oul6g"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_oul6g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oul6g"]
+size = Vector3(1.81934, 1, 1.74438)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kqu6x"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_oul6g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_oul6g")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.2294, 0)
+size = 2.905
+
+[node name="TreatChecker" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TreatChecker"]
+shape = SubResource("BoxShape3D_oul6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_kqu6x")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0808, 0)
+visible = false
+light_energy = 2.131
+shadow_enabled = true
+
+[connection signal="area_entered" from="TreatChecker" to="." method="_on_treat_checker_area_entered"]

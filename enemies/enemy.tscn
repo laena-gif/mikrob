@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://chf7ms0p7gw2x"]
+
+[ext_resource type="Script" uid="uid://q0q34xxc33sd" path="res://enemies/enemy.gd" id="1_fw1ev"]
+[ext_resource type="AudioStream" uid="uid://cpgalyown3s3j" path="res://enemies/436782__alivvie__scary-shout.mp3" id="2_7frlh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x4ssu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4ssu"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_fw1ev"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fw1ev"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7frlh"]
+
+[node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("1_fw1ev")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_x4ssu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 1.74846e-07, 7.64274e-15, 0, -4.37114e-08, 1, 1.74846e-07, -1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_x4ssu")
+mesh = SubResource("PrismMesh_fw1ev")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -5)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+
+[node name="eyes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103656, -0.180989)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="eyes"]
+transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, -0.3, 0.195, 0)
+mesh = SubResource("SphereMesh_fw1ev")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="eyes"]
+transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, 0.3, 0.195, 0)
+mesh = SubResource("SphereMesh_fw1ev")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7frlh")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_7frlh")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
