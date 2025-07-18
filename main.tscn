@@ -1,16 +1,21 @@
-[gd_scene load_steps=16 format=3 uid="uid://cuf3xqi6gdspg"]
+[gd_scene load_steps=21 format=3 uid="uid://cuf3xqi6gdspg"]
 
-[ext_resource type="PackedScene" uid="uid://bwwod1fc5ir4r" path="res://props/wall.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bwwod1fc5ir4r" path="res://props/level/walls/wall_small.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://wq8xow3orism" path="res://player/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://u6tf1h3cjdrw" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cmas80y3m2de" path="res://props/level/walls/wall_large.tscn" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://chf7ms0p7gw2x" path="res://enemies/enemy.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://c6n7fqjactyd0" path="res://props/door.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c6n7fqjactyd0" path="res://props/level/interactive/door.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://byk5koitss5ba" path="res://props/level/walls/wall_medium.tscn" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://cwvortbak34ms" path="res://props/treat.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bq5di8exvhn7i" path="res://props/portal.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://bq5di8exvhn7i" path="res://props/level/interactive/portal.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://cmg37x1to63ua" path="res://props/level/obstacles/cylinder.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://gup2c4ceer5b" path="res://props/level/interactive/plate.tscn" id="7_efxa6"]
+[ext_resource type="Script" uid="uid://cmxph706rcy81" path="res://props/level/interactive/plate.gd" id="8_dg77c"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_h2yge"]
-vertices = PackedVector3Array(-3, 0.444988, -6.75, -1, 0.444988, -6.75, -1, 0.444988, -24.25, -3.5, 0.444988, -6.25, -24.25, 0.444988, -24.25, -24.25, 0.444988, -5, -3.5, 0.444988, -4.75, 18, 0.444988, -6.75, 18.5, 0.444988, -5.5, 24.25, 0.444988, -5, 24.25, 0.444988, -24.25, 18.25, 0.444988, 4.25, 24.25, 0.444988, 4.25, -24.25, 0.444988, 5.25, -3.5, 0.444988, 5, -1.5, 0.444988, -4.75, -1.5, 0.444988, -2.5, -1, 0.444988, -3, 3.5, 0.444988, 5, 3.5, 0.444988, 3, 2.75, 0.444988, 2.5, -1.5, 0.444988, 5, 1.75, 0.444988, -3, 2.75, 0.444988, -4.75, -1, 0.444988, -1, -1.5, 0.444988, -1.5, 2.25, 0.444988, -2.5, 1.75, 0.444988, -1, 7.5, 0.444988, -3.5, 8.5, 0.444988, -4, 8.5, 0.444988, -4.75, 4.75, 0.444988, -4.75, 8.25, 0.444988, 5, 8.25, 0.444988, 3, 7.25, 0.444988, 2.5, 4.5, 0.444988, 2.5, 7.25, 0.444988, -0.5, 9.25, 0.444988, -3.5, 16.5, 0.444988, -4.75, 9.25, 0.444988, 2.5, 16.25, 0.444988, 5, 16.5, 0.444988, 3, 18.25, 0.444988, 6.25, 17.75, 0.444988, 6.75, 24.25, 0.444988, 24.25, -1.5, 0.444988, 7, -1.75, 0.444988, 24.25, -3, 0.444988, 7, -3.5, 0.444988, 6.5, -24.25, 0.444988, 24.25)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(3, 6, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(1, 2, 7), PackedInt32Array(7, 2, 10), PackedInt32Array(12, 11, 9), PackedInt32Array(9, 11, 8), PackedInt32Array(14, 13, 6), PackedInt32Array(6, 13, 5), PackedInt32Array(17, 16, 15), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(17, 15, 22), PackedInt32Array(22, 15, 23), PackedInt32Array(24, 21, 25), PackedInt32Array(26, 22, 23), PackedInt32Array(27, 20, 24), PackedInt32Array(24, 20, 21), PackedInt32Array(26, 23, 20), PackedInt32Array(20, 27, 26), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(19, 35, 18), PackedInt32Array(18, 35, 34), PackedInt32Array(18, 34, 33), PackedInt32Array(18, 33, 32), PackedInt32Array(28, 36, 31), PackedInt32Array(31, 36, 35), PackedInt32Array(36, 34, 35), PackedInt32Array(29, 30, 37), PackedInt32Array(37, 30, 38), PackedInt32Array(33, 39, 32), PackedInt32Array(32, 39, 40), PackedInt32Array(40, 39, 41), PackedInt32Array(39, 37, 41), PackedInt32Array(41, 37, 38), PackedInt32Array(42, 11, 12), PackedInt32Array(42, 12, 43), PackedInt32Array(43, 12, 44), PackedInt32Array(45, 43, 46), PackedInt32Array(46, 43, 44), PackedInt32Array(47, 45, 46), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 49), PackedInt32Array(48, 49, 13), PackedInt32Array(13, 14, 48)]
+vertices = PackedVector3Array(-11.0246, 0.5, -22.2561, -10.5246, 0.5, -22.7561, -10.5246, 0.5, -24.2561, -24.2746, 0.5, -24.2561, -24.2746, 0.5, 1.24391, -11.0246, 0.5, 0.993914, 22.9754, 0.5, -22.5061, 22.7254, 0.5, 2.74391, 24.2254, 0.5, 2.74391, 24.2254, 0.5, -24.2561, 22.4754, 0.5, -23.0061, -1.02456, 0.5, -9.00609, -0.274565, 0.5, -9.00609, -0.274565, 0.5, -9.75609, -1.02456, 0.5, -10.0061, -4.52456, 0.5, -20.7561, -7.77456, 0.5, -21.0061, -7.02456, 0.5, -20.0061, -5.02456, 0.5, -20.2561, -1.27456, 0.5, -10.5061, -2.02456, 0.5, -11.2561, -2.02456, 0.5, -12.0061, -3.02456, 0.5, -11.2561, -1.52456, 0.5, -13.2561, -0.524565, 0.5, -13.2561, -0.274565, 0.5, -13.5061, -1.27456, 0.5, -14.7561, -6.02456, 0.5, -18.2561, -6.02456, 0.5, -11.5061, -5.02456, 0.5, -8.75609, -7.27456, 0.5, -18.7561, -1.27456, 0.5, -17.2561, -3.02456, 0.5, -20.2561, 0.225435, 0.5, -19.0061, 1.97544, 0.5, -19.2561, 1.97544, 0.5, -21.0061, -8.02456, 0.5, -11.5061, -7.77456, 0.5, -18.5061, -9.02456, 0.5, -18.5061, -9.02456, 0.5, -2.75609, -8.02456, 0.5, -3.00609, -8.02456, 0.5, -8.25609, -6.52456, 0.5, -8.75609, -7.52456, 0.5, -11.0061, 10.9754, 0.5, -18.2561, 10.7254, 0.5, -18.5061, 9.97544, 0.5, -17.7561, 7.97544, 0.5, -15.0061, 3.72544, 0.5, -19.0061, 7.47544, 0.5, -19.5061, 7.97544, 0.5, -21.0061, 5.22544, 0.5, -15.7561, 7.22544, 0.5, -15.0061, 9.22544, 0.5, -17.7561, 5.22544, 0.5, -17.2561, 10.7254, 0.5, -19.2561, 11.7254, 0.5, -19.0061, 18.4754, 0.5, -19.0061, 18.9754, 0.5, -18.5061, 20.9754, 0.5, -21.0061, 18.9754, 0.5, -16.5061, 20.9754, 0.5, -16.5061, 8.97544, 0.5, -21.0061, 2.72544, 1.5, -14.2561, 2.97544, 1.5, -14.7561, 2.47544, 1.5, -15.0061, 1.22544, 1.5, -14.2561, 0.225435, 1.5, -15.2561, 2.47544, 1.5, -15.7561, 2.72544, 1.5, -17.7561, 1.22544, 1.5, -17.7561, 0.225435, 1.5, -16.7561, 3.72544, 1.5, -16.5061, 15.9754, 0.5, -11.7561, 15.4754, 0.5, -11.2561, 16.4754, 0.5, -11.2561, 18.4754, 0.5, -9.00609, 18.9754, 0.5, -8.00609, 19.4754, 0.5, -8.25609, 17.4754, 0.5, -10.0061, 17.4754, 0.5, -9.00609, 19.4754, 0.5, -10.7561, 18.4754, 0.5, -11.0061, 16.9754, 0.5, -17.0061, 15.4754, 0.5, -16.0061, 15.9754, 0.5, -15.5061, 18.9754, 0.5, -11.5061, 20.9754, 0.5, -12.0061, 16.9754, 0.5, -11.5061, 12.2254, 0.5, -17.0061, 9.47544, 0.5, -14.0061, 11.2254, 0.5, -12.5061, 14.4754, 0.5, -16.0061, 14.7254, 0.5, -10.2561, 14.7254, 0.5, -11.2561, 14.2254, 0.5, -10.5061, 8.22544, 0.5, -12.7561, 4.97544, 0.5, -14.0061, 6.47544, 0.5, -13.0061, 0.725435, 0.5, -12.7561, 0.975435, 0.5, -11.2561, 11.2254, 0.5, -11.7561, 6.97544, 0.5, -11.5061, 5.72544, 0.5, -9.00609, 14.7254, 0.5, -9.00609, 12.9754, 0.5, -10.5061, 0.975435, 0.5, -10.2561, 1.72544, 0.5, -9.00609, 5.47544, 0.5, -13.0061, 3.22544, 0.5, -12.7561, 4.97544, 0.5, -9.50609, -3.52456, 0.5, -6.50609, -3.02456, 0.5, -5.50609, -2.52456, 0.5, -6.25609, -6.02456, 0.5, -8.25609, -5.02456, 0.5, -7.50609, -6.02456, 0.5, -1.50609, -5.02456, 0.5, -1.25609, -5.02456, 0.5, -6.00609, -8.02456, 0.5, -1.50609, -9.02456, 0.5, 0.993914, -4.52456, 0.5, -7.00609, -4.52456, 0.5, -6.50609, -1.52456, 0.5, -6.25609, 2.47544, 0.5, -7.00609, 5.22544, 0.5, -7.50609, -0.524565, 0.5, -5.00609, -0.524565, 0.5, -4.25609, 0.725435, 0.5, -3.00609, -6.77456, 0.5, 0.993914, -6.52456, 0.5, -1.00609, -6.27456, 0.5, -1.00609, 6.72544, 0.5, -7.00609, 6.72544, 0.5, -3.00609, 19.9754, 0.5, -7.50609, 18.4754, 0.5, -7.00609, 19.7254, 0.5, -1.50609, 19.9754, 0.5, -1.25609, 20.9754, 0.5, -1.25609, 12.7254, 0.5, -7.00609, 12.7254, 0.5, -3.00609, 19.2254, 0.5, -3.00609, 20.9754, 0.5, -7.50609, 19.2254, 0.5, -1.00609, 19.2254, 0.5, -0.256086, 12.4754, 0.5, -1.00609, 7.97544, 0.5, -2.00609, 8.72544, 0.5, -1.25609, 9.72544, 0.5, -1.00609, 11.9754, 0.5, -2.50609, 7.47544, 0.5, -3.00609, 10.2254, 0.5, 0.993914, 19.2254, 0.5, 0.993914, 7.47544, 0.5, -1.00609, 7.47544, 0.5, -0.00608635, 0.725435, 0.5, -1.00609, -1.02456, 0.5, -3.50609, 0.225435, 0.5, -2.50609, -3.02456, 0.5, 0.993914, 7.47544, 0.5, 0.993914, -3.02456, 0.5, -3.75609, -11.0246, 0.5, 2.49391, -10.5246, 0.5, 2.99391, -24.2746, 0.5, 24.2439, -9.27456, 0.5, 24.2439, -9.02456, 0.5, 2.99391, 24.2254, 0.5, 24.2439)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(1, 2, 10), PackedInt32Array(10, 2, 9), PackedInt32Array(9, 6, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(18, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(13, 14, 19), PackedInt32Array(19, 14, 20), PackedInt32Array(20, 21, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(27, 18, 28), PackedInt32Array(28, 18, 29), PackedInt32Array(30, 17, 27), PackedInt32Array(27, 17, 18), PackedInt32Array(21, 22, 23), PackedInt32Array(23, 22, 26), PackedInt32Array(26, 22, 31), PackedInt32Array(31, 22, 32), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 32), PackedInt32Array(38, 37, 36), PackedInt32Array(41, 40, 39), PackedInt32Array(43, 42, 36), PackedInt32Array(36, 42, 41), PackedInt32Array(43, 28, 42), PackedInt32Array(42, 28, 29), PackedInt32Array(32, 33, 31), PackedInt32Array(41, 39, 36), PackedInt32Array(36, 39, 38), PackedInt32Array(35, 32, 15), PackedInt32Array(16, 35, 15), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(34, 35, 48), PackedInt32Array(48, 35, 49), PackedInt32Array(49, 35, 50), PackedInt32Array(52, 51, 47), PackedInt32Array(47, 51, 54), PackedInt32Array(47, 54, 53), PackedInt32Array(53, 54, 49), PackedInt32Array(49, 54, 48), PackedInt32Array(53, 46, 47), PackedInt32Array(45, 55, 44), PackedInt32Array(44, 55, 56), PackedInt32Array(59, 58, 57), PackedInt32Array(60, 58, 61), PackedInt32Array(61, 58, 59), PackedInt32Array(55, 62, 56), PackedInt32Array(56, 62, 57), PackedInt32Array(57, 62, 59), PackedInt32Array(64, 63, 65), PackedInt32Array(65, 63, 66), PackedInt32Array(71, 70, 67), PackedInt32Array(67, 70, 66), PackedInt32Array(66, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(68, 65, 66), PackedInt32Array(69, 72, 68), PackedInt32Array(75, 74, 73), PackedInt32Array(76, 78, 77), PackedInt32Array(76, 80, 79), PackedInt32Array(75, 82, 79), PackedInt32Array(79, 82, 81), PackedInt32Array(79, 81, 76), PackedInt32Array(76, 81, 78), PackedInt32Array(83, 85, 84), PackedInt32Array(81, 86, 87), PackedInt32Array(87, 86, 61), PackedInt32Array(61, 86, 60), PackedInt32Array(75, 73, 88), PackedInt32Array(88, 73, 85), PackedInt32Array(88, 85, 83), PackedInt32Array(90, 89, 91), PackedInt32Array(91, 89, 92), PackedInt32Array(86, 81, 82), PackedInt32Array(84, 92, 83), PackedInt32Array(83, 92, 89), PackedInt32Array(75, 88, 82), PackedInt32Array(95, 94, 93), PackedInt32Array(93, 94, 74), PackedInt32Array(98, 97, 96), PackedInt32Array(25, 99, 24), PackedInt32Array(24, 99, 100), PackedInt32Array(105, 104, 101), PackedInt32Array(101, 104, 96), PackedInt32Array(96, 104, 102), PackedInt32Array(102, 104, 103), PackedInt32Array(93, 104, 95), PackedInt32Array(95, 104, 105), PackedInt32Array(13, 106, 12), PackedInt32Array(12, 106, 107), PackedInt32Array(108, 97, 98), PackedInt32Array(108, 109, 97), PackedInt32Array(106, 100, 107), PackedInt32Array(107, 100, 109), PackedInt32Array(107, 109, 108), PackedInt32Array(100, 99, 109), PackedInt32Array(103, 110, 102), PackedInt32Array(91, 101, 90), PackedInt32Array(90, 101, 96), PackedInt32Array(102, 98, 96), PackedInt32Array(113, 112, 111), PackedInt32Array(42, 29, 114), PackedInt32Array(114, 29, 115), PackedInt32Array(117, 116, 118), PackedInt32Array(118, 116, 114), PackedInt32Array(40, 119, 39), PackedInt32Array(39, 119, 120), PackedInt32Array(122, 118, 121), PackedInt32Array(121, 118, 115), PackedInt32Array(115, 118, 114), PackedInt32Array(113, 111, 123), PackedInt32Array(123, 111, 121), PackedInt32Array(123, 121, 124), PackedInt32Array(103, 125, 110), PackedInt32Array(110, 125, 124), PackedInt32Array(128, 127, 126), PackedInt32Array(126, 123, 124), PackedInt32Array(130, 129, 119), PackedInt32Array(119, 129, 120), PackedInt32Array(111, 122, 121), PackedInt32Array(131, 129, 130), PackedInt32Array(130, 116, 131), PackedInt32Array(131, 116, 117), PackedInt32Array(125, 132, 124), PackedInt32Array(124, 132, 133), PackedInt32Array(124, 133, 128), PackedInt32Array(124, 128, 126), PackedInt32Array(78, 134, 77), PackedInt32Array(77, 134, 135), PackedInt32Array(138, 137, 136), PackedInt32Array(139, 135, 140), PackedInt32Array(140, 135, 141), PackedInt32Array(134, 142, 135), PackedInt32Array(135, 142, 141), PackedInt32Array(141, 142, 136), PackedInt32Array(136, 142, 138), PackedInt32Array(136, 137, 143), PackedInt32Array(143, 137, 144), PackedInt32Array(145, 143, 144), PackedInt32Array(147, 146, 148), PackedInt32Array(148, 146, 150), PackedInt32Array(148, 150, 149), PackedInt32Array(148, 149, 145), PackedInt32Array(148, 145, 151), PackedInt32Array(151, 145, 144), PackedInt32Array(151, 144, 152), PackedInt32Array(150, 133, 132), PackedInt32Array(140, 149, 139), PackedInt32Array(139, 149, 150), PackedInt32Array(139, 150, 132), PackedInt32Array(146, 147, 153), PackedInt32Array(153, 147, 154), PackedInt32Array(155, 153, 154), PackedInt32Array(157, 156, 128), PackedInt32Array(128, 156, 127), PackedInt32Array(154, 159, 155), PackedInt32Array(155, 159, 158), PackedInt32Array(157, 155, 156), PackedInt32Array(156, 155, 160), PackedInt32Array(160, 155, 158), PackedInt32Array(4, 5, 161), PackedInt32Array(161, 162, 4), PackedInt32Array(4, 162, 163), PackedInt32Array(163, 162, 164), PackedInt32Array(162, 165, 164), PackedInt32Array(8, 166, 7), PackedInt32Array(7, 166, 165), PackedInt32Array(165, 166, 164)]
 agent_radius = 0.52
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7dm0k"]
@@ -40,12 +45,13 @@ ambient_light_source = 3
 script = ExtResource("1_lquwl")
 
 [node name="Level" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0226402, 0, 0.00746536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0216293, 3.8147e-06, -0.0253029)
 navigation_mesh = SubResource("NavigationMesh_h2yge")
 
 [node name="Floor" type="StaticBody3D" parent="Level"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0245638, 0.00868797, -0.0060873)
 mesh = SubResource("PlaneMesh_7dm0k")
 skeleton = NodePath("../../..")
 
@@ -53,151 +59,307 @@ skeleton = NodePath("../../..")
 transform = Transform3D(5.6, 0, 0, 0, 1, 0, 0, 0, 4.2, 0, 0, 0)
 shape = SubResource("WorldBoundaryShape3D_ig7tw")
 
-[node name="Walls" type="Node3D" parent="Level"]
+[node name="Level_Box" type="Node3D" parent="Level"]
 
-[node name="Wall" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4821, 0, 0)
+[node name="Wall_Large" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, -22)
 
-[node name="Wall3" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4821, 0, -3.77638)
+[node name="Wall_Large4" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -16)
 
-[node name="Wall4" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4821, 0, 4)
+[node name="Wall_Large5" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -4)
 
-[node name="Wall2" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.448435, 0, -5.7368)
+[node name="Wall_Large6" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -16)
 
-[node name="Wall6" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.55157, 0, -5.7368)
+[node name="Wall_Large7" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
 
-[node name="Wall7" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.51276, 0, -5.7368)
+[node name="Wall_Large2" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -22)
 
-[node name="Wall15" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.5002, 0, -5.7368)
+[node name="Wall_Large3" parent="Level/Level_Box" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -22)
 
-[node name="Wall16" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.5024, 0, -5.7368)
+[node name="Room_Strt_Right" type="Node3D" parent="Level"]
 
-[node name="Wall17" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-0.999827, 0, 0.0185867, 0, 1, 0, -0.0185867, 0, -0.999827, 3.70257, 0, -3.78739)
+[node name="Terrain" type="Node3D" parent="Level/Room_Strt_Right"]
 
-[node name="Wall18" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-0.999827, 0, 0.0185867, 0, 1, 0, -0.0185867, 0, -0.999827, 3.62873, 0, 0.140948)
+[node name="Wall_Medium" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, -18)
 
-[node name="Wall19" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-0.999827, 0, 0.0185867, 0, 1, 0, -0.0185867, 0, -0.999827, 8.33716, 0.0120008, -1.22961)
+[node name="Wall_Medium2" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 10, 0, -15.9)
 
-[node name="Wall20" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(-0.999827, 0, 0.0185867, 0, 1, 0, -0.0185867, 0, -0.999827, 8.29548, 0, 0.160462)
+[node name="Wall_Medium5" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(0.283341, 0, 0.748143, 0, 0.8, 0, -0.748143, 0, 0.283341, 5.73446, 0, -14.6275)
 
-[node name="Wall21" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00408731, 2.07732e-08, -0.499967, 1.5884e-08, 0.5, 2.10293e-08, 0.356977, -2.24857e-08, 0.00572452, 0.444651, 0, -1.99558)
+[node name="Wall_Medium3" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 4, 0, -10)
 
-[node name="Wall5" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00795864, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00795864, -0.52503, -0.01, 6.00602)
+[node name="Wall_Medium4" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, -8)
 
-[node name="Wall8" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00795864, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00795864, 3.47497, -0.01, 5.96555)
+[node name="Wall_Small" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 9, 0, -19.5)
 
-[node name="Wall9" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00795864, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00795864, 7.47497, -0.01, 5.94307)
+[node name="Wall_Small2" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(-0.86921, 0, -0.494442, 0, 1, 0, 0.494442, 0, -0.86921, -0.5, 0, -11.5)
 
-[node name="Wall10" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00795864, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00795864, 11.475, -0.01, 5.91181)
+[node name="Wall_Large7" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("2_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -14)
 
-[node name="Wall11" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.00795864, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00795864, 13.2447, -0.01, 5.87813)
+[node name="Cylinder" parent="Level/Room_Strt_Right/Terrain" instance=ExtResource("5_kek77")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 2, 0, -16)
 
-[node name="Wall12" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.999874, 0, -0.0158468, 0, 1, 0, 0.0158468, 0, 0.999874, 17.295, -0.01, 3.93362)
+[node name="Enemies" type="Node3D" parent="Level/Room_Strt_Right"]
 
-[node name="Wall13" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.999874, 0, -0.0158468, 0, 1, 0, 0.0158468, 0, 0.999874, 17.3583, -0.01, 0.122552)
+[node name="Enemy" parent="Level/Room_Strt_Right/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -10)
+wander_points = [NodePath("../E1-00"), NodePath("../E1-01"), NodePath("../E1-02"), NodePath("../E1-03"), NodePath("../E1-02"), NodePath("../E1-01"), NodePath("../E1-04"), NodePath("../E1-05"), NodePath("../E1-00")]
+wander_speed = 2.5
+chase_speed = 1.5
 
-[node name="Wall14" parent="Level/Walls" instance=ExtResource("1_0xm2m")]
-transform = Transform3D(0.999874, 0, -0.0158468, 0, 1, 0, 0.0158468, 0, 0.999874, 17.4216, -0.01, -3.76448)
+[node name="E1-00" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -10)
+gizmo_extents = 0.5
 
-[node name="Doors" type="Node3D" parent="Level"]
+[node name="E1-01" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -20)
+gizmo_extents = 0.5
 
-[node name="Door" parent="Level/Doors" instance=ExtResource("3_7mycd")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.2907, -0.0550117, 5.87932)
+[node name="E1-02" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -20)
+gizmo_extents = 0.5
 
-[node name="Portal" type="Node3D" parent="Level"]
+[node name="E1-03" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -16)
+gizmo_extents = 0.5
 
-[node name="Portal" parent="Level/Portal" instance=ExtResource("4_272bh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3825, 0, 6.97853)
+[node name="E1-04" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -14)
+gizmo_extents = 0.5
+
+[node name="E1-05" type="Marker3D" parent="Level/Room_Strt_Right/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -10)
+gizmo_extents = 0.5
+
+[node name="Room_Strt_Left" type="Node3D" parent="Level"]
+
+[node name="Terrain" type="Node3D" parent="Level/Room_Strt_Left"]
+
+[node name="Wall_Medium" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0125, -0.010457, -15.0059)
+
+[node name="Wall_Large" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, -8)
+
+[node name="Wall_Small" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -13.0867)
+
+[node name="Wall_Small3" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 13, 0, -11.8043)
+
+[node name="Wall_Small2" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -14)
+
+[node name="Wall_Small4" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 14.3209, 0, -14.2869)
+
+[node name="Wall_Small5" parent="Level/Room_Strt_Left/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 13, 0, -13)
+
+[node name="Enemies" type="Node3D" parent="Level/Room_Strt_Left"]
+
+[node name="Enemy" parent="Level/Room_Strt_Left/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10)
+wander_points = [NodePath("../E1-00"), NodePath("../E1-01"), NodePath("../E1-02"), NodePath("../E1-03"), NodePath("../E1-04")]
+wander_speed = 3.0
+chase_speed = 1.5
+
+[node name="E1-00" type="Marker3D" parent="Level/Room_Strt_Left/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10)
+
+[node name="E1-01" type="Marker3D" parent="Level/Room_Strt_Left/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
+
+[node name="E1-02" type="Marker3D" parent="Level/Room_Strt_Left/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -16)
+
+[node name="E1-03" type="Marker3D" parent="Level/Room_Strt_Left/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -10)
+
+[node name="E1-04" type="Marker3D" parent="Level/Room_Strt_Left/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -10)
+
+[node name="Room_Long" type="Node3D" parent="Level"]
+
+[node name="Terrain" type="Node3D" parent="Level/Room_Long"]
+
+[node name="Wall_Large" parent="Level/Room_Long/Terrain" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16, 0, 2)
+
+[node name="Wall_Large2" parent="Level/Room_Long/Terrain" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 2)
+
+[node name="Wall_Large3" parent="Level/Room_Long/Terrain" instance=ExtResource("2_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 2)
+
+[node name="Wall_Small8" parent="Level/Room_Long/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 21.2629, 0, -11.0997)
+
+[node name="Wall_Small9" parent="Level/Room_Long/Terrain" instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -9.5)
+
+[node name="Trap" type="Node3D" parent="Level/Room_Long/Terrain"]
+
+[node name="Plate" parent="Level/Room_Long/Terrain/Trap" node_paths=PackedStringArray("spawn_position") instance=ExtResource("7_efxa6")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 21.183, 0, -9.5)
+script = ExtResource("8_dg77c")
+EnemyScene = ExtResource("2_h2yge")
+spawn_position = NodePath("../spawn")
+
+[node name="spawn" type="Marker3D" parent="Level/Room_Long/Terrain/Trap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
+
+[node name="Wall_Medium6" parent="Level/Room_Long/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.8934, 0, -2)
+
+[node name="Wall_Medium7" parent="Level/Room_Long/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -2)
+
+[node name="Enemies" type="Node3D" parent="Level/Room_Long"]
+
+[node name="Enemy" parent="Level/Room_Long/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 0)
+wander_points = [NodePath("../E01-00"), NodePath("../E01-01"), NodePath("../E01-02"), NodePath("../E01-03"), NodePath("../E01-00")]
+wander_speed = 3.0
+chase_speed = 1.5
+
+[node name="E01-00" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="E01-01" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -5)
+
+[node name="E01-02" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
+
+[node name="E01-03" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Enemy2" parent="Level/Room_Long/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+wander_points = [NodePath("../E02-02"), NodePath("../E02-03"), NodePath("../E02-00"), NodePath("../E02-01"), NodePath("../E02-02")]
+wander_speed = 3.0
+chase_speed = 1.5
+
+[node name="E02-00" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96975, 0, 0)
+
+[node name="E02-01" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96975, 0, -5)
+
+[node name="E02-02" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+
+[node name="E02-03" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.03025, 0, 0)
+
+[node name="Enemy3" parent="Level/Room_Long/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.94753, 0, 0)
+wander_points = [NodePath("../E03-IDLE")]
+
+[node name="E03-IDLE" type="Marker3D" parent="Level/Room_Long/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="Doors" type="Node3D" parent="Level/Room_Long"]
+
+[node name="Door" parent="Level/Room_Long/Doors" instance=ExtResource("3_7mycd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, 2)
+
+[node name="Portal" parent="Level/Room_Long/Doors" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97485, 9.53674e-07, 1.99297)
+
+[node name="Room_Long_2" type="Node3D" parent="Level"]
+
+[node name="Terrain" type="Node3D" parent="Level/Room_Long_2"]
+
+[node name="Wall_Medium4" parent="Level/Room_Long_2/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2.57732)
+
+[node name="Wall_Medium5" parent="Level/Room_Long_2/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.865966)
+
+[node name="Wall_Medium6" parent="Level/Room_Long_2/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -5)
+
+[node name="Wall_Medium7" parent="Level/Room_Long_2/Terrain" instance=ExtResource("3_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -15)
+
+[node name="Enemies" type="Node3D" parent="Level/Room_Long_2"]
+
+[node name="Enemy" parent="Level/Room_Long_2/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
+wander_points = [NodePath("../E01-00"), NodePath("../E01-01"), NodePath("../E01-02"), NodePath("../E01-03"), NodePath("../E01-00")]
+wander_speed = 2.5
+chase_speed = 1.5
+
+[node name="E01-00" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
+
+[node name="E01-01" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -9)
+
+[node name="E01-02" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, -9)
+
+[node name="E01-03" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, 0)
+
+[node name="Enemy2" parent="Level/Room_Long_2/Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, -20)
+wander_points = [NodePath("../E02-00"), NodePath("../E02-01"), NodePath("../E02-02"), NodePath("../E02-03"), NodePath("../E02-00")]
+wander_speed = 2.5
+chase_speed = 1.5
+
+[node name="E02-00" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, -20)
+
+[node name="E02-01" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0, -10)
+
+[node name="E02-02" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -10)
+
+[node name="E02-03" type="Marker3D" parent="Level/Room_Long_2/Enemies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -20)
+
+[node name="Doors" type="Node3D" parent="Level/Room_Long_2"]
+
+[node name="Door" parent="Level/Room_Long_2/Doors" instance=ExtResource("3_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="Portal" parent="Level/Room_Long_2/Doors" instance=ExtResource("4_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 9.53674e-07, -10)
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73666, 2.2456, -4.29918)
-
-[node name="Enemies" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.04444, 0)
-
-[node name="Enemy" parent="Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47871, 1.54852, -1.96372)
-wander_points = [NodePath("../E1P1"), NodePath("../E1P2")]
-
-[node name="Enemy2" parent="Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73741, 1.54852, 0)
-wander_points = [NodePath("../E2P1"), NodePath("../E2P2_IDLE"), NodePath("../E2P3"), NodePath("../E2P4")]
-
-[node name="Enemy3" parent="Enemies" node_paths=PackedStringArray("wander_points") instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.557, 1.54852, -2.82501)
-wander_points = [NodePath("../E3P1"), NodePath("../E3P2"), NodePath("../E3P3")]
-
-[node name="E1P1" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881934, 1.54592, -0.373395)
-gizmo_extents = 1.0
-
-[node name="E1P2" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30481, 1.54592, -0.373395)
-gizmo_extents = 1.0
-
-[node name="E2P1" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89303, 1.54592, 3.6623)
-gizmo_extents = 1.0
-
-[node name="E2P2_IDLE" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.08131, 1.54592, -4.19394)
-gizmo_extents = 1.0
-
-[node name="E2P3" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1713, 1.54592, -4.34516)
-gizmo_extents = 1.0
-
-[node name="E2P4" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5388, 1.54592, 3.66033)
-gizmo_extents = 1.0
-
-[node name="E3P1" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7492, 1.54592, -5.1943)
-gizmo_extents = 1.0
-
-[node name="E3P2" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8009, 1.54592, -1.55968)
-gizmo_extents = 1.0
-
-[node name="E3P3" type="Marker3D" parent="Enemies"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2986, 1.54592, -1.55968)
-gizmo_extents = 1.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.5, -20)
 
 [node name="Treats" type="Node3D" parent="."]
 
-[node name="Treat" parent="Treats" instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.74086)
+[node name="Trt_Strt_Left" parent="Treats" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -13)
 
-[node name="Treat5" parent="Treats" instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0631, 0, -4.6699)
+[node name="Trt_Long_2" parent="Treats" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -10)
 
-[node name="Treat2" parent="Treats" instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82065, 0, 3.6962)
+[node name="Trt_Long" parent="Treats" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -5)
 
-[node name="Treat3" parent="Treats" instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82065, 0, -2.84296)
-
-[node name="Treat4" parent="Treats" instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92304, 0, -2.12429)
+[node name="Trt_Strt_Rig" parent="Treats" instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6736, 0, -12.2619)
 
 [node name="UI" type="Node2D" parent="."]
 
