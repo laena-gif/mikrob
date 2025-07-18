@@ -1,0 +1,5 @@
+Enemies
+	Pathing 
+		- Enemies don't visit all nodes
+		- Enemies go to next node before "touching" current node
+
