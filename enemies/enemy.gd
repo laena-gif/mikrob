@@ -15,8 +15,8 @@ var current_wander_point_idx: int = 0
 
 
 var target: Node3D = null
-var wander_speed: float = 1.5
-var chase_speed: float = wander_speed * 1.2
+@export var wander_speed: float = 1.5
+@export var chase_speed: float = wander_speed * 1.2
 
 func _ready() -> void:
 	nav_agent.path_max_distance = 0.1

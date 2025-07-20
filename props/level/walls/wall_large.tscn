@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwwod1fc5ir4r"]
+[gd_scene load_steps=4 format=3 uid="uid://cmas80y3m2de"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akguo"]
 albedo_color = Color(1, 0, 0, 1)
@@ -6,13 +6,13 @@ metallic = 1.0
 roughness = 0.7
 
 [sub_resource type="BoxMesh" id="BoxMesh_akguo"]
-size = Vector3(0.1, 2, 4)
+size = Vector3(0.1, 2, 12)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_akguo"]
 margin = 0.1
-size = Vector3(0.1, 2, 4)
+size = Vector3(0.1, 2, 12)
 
-[node name="Wall" type="StaticBody3D"]
+[node name="Wall_Large" type="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
